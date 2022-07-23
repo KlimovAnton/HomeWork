@@ -1,10 +1,16 @@
+:root {
+    --main-title-color: #fff;
+    --hover-focus-color: #2196F3; 
+    --title-color: #212121;
+}
+
 body {
     font-family: "Roboto", "Arial", sans-serif;
     color:#000;
 }
 
 .header {
-    background-color: #FFF;
+    background-color: var(--main-title-color);
 }
 
 .list {
@@ -24,6 +30,13 @@ body {
     color:#2196F3;
 }
 
+.logo-black {
+    color: #000;
+}
+
+.logo-white {
+    color: #fff;
+}
 .header-link {
     font-weight: 500;
     font-size: 14px;
@@ -46,7 +59,7 @@ body {
 .header-link:focus,
 .header-mail:focus,
 .header-tel:focus {
-    color:#2196F3;
+    color:var(--hover-focus-color);
 }
 
 .solutions {
@@ -60,7 +73,7 @@ body {
     text-align: center;
     letter-spacing: 0.06em;
     text-transform: uppercase;
-    color: #FFFFFF;
+    color: var(--main-title-color);
 }
 
 /*.btn {
@@ -83,23 +96,24 @@ body {
     cursor: pointer;
 }  
 
-.btn:hover,
-.btn:focus,
-.btn-portfolio:focus,
-.btn-portfolio:hover {
-    background:#2196F3;
-}
 
 .btn-portfolio {
+    font-family: 'Roboto';
+    font-style: normal;
     font-weight: 500;
     font-size: 16px;
     line-height: 1.62;
     text-align: center;
     letter-spacing: 0.03em;
-    color: #212121;
+    color: var(--title-color);
 }
 
-
+.btn:hover,
+.btn:focus,
+.btn-portfolio:focus,
+.btn-portfolio:hover {
+    background:var(--hover-focus-color);
+}
 
 .quality-title {
     font-weight: 700;
@@ -107,7 +121,7 @@ body {
     line-height: 1.42;
     letter-spacing: 0.03em;
     text-transform: uppercase;
-    color: #212121;
+    color: var(--title-color);
 }
 
 .quaility-p {
@@ -124,16 +138,16 @@ body {
     line-height: 1.16;
     text-align: center;
     letter-spacing: 0.03em;
-    color: #212121
+    color: var(--title-color);
 }
 
-.team-title {
+.team-item-title {
     font-weight: 500;
     font-size: 16px;
     line-height: 1.18;
     text-align: center;
     letter-spacing: 0.03em;
-    color: #212121;
+    color: var(--title-color);
 }
 
 .team-p {
@@ -147,9 +161,9 @@ body {
 .footer {
     background:#2F303A;
 }
-.footer-address {
+.footer-link {
     font-size: 14px;
-    line-height: 1.74;
+    line-height: 1.71;
     letter-spacing: 0.03em;
     color: #FFFFFF;
 }
@@ -157,7 +171,7 @@ body {
 .footer-mail,
 .footer-tel {
     font-size: 14px;
-    line-height: 1.74;
+    line-height: 1.71;
     letter-spacing: 0.03em;
     color: rgba(255, 255, 255, 0.6);
 }
@@ -168,7 +182,7 @@ body {
 .footer-link:focus,
 .footer-mail:focus,
 .footer-tel:focus {
-    color:#2196F3;
+    color:var(--hover-focus-color);
 }
 
 .work-portfolio-title {
@@ -176,7 +190,7 @@ body {
     font-size: 18px;
     line-height: 2;
     letter-spacing: 0.06em;
-    color: #212121;
+    color: var(--title-color);
 }
 
 .work-portfolio-text {
