@@ -400,8 +400,24 @@ margin-left: 51px;
     width: 44px;
     height: 44px;
     border-radius: 50%;
-    background-color: brown;
-    display: block;
+    background-color: #fff;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+.people-soc-link:hover,
+ .people-soc-link:focus {
+    background-color: #2196F3;
+}
+
+.peaple-soc-icon{
+    fill: #AFB1B8;
+}
+
+.people-soc-link:hover .peaple-soc-icon, 
+.people-soc-link:focus .peaple-soc-icon{
+    fill:#fff;
 }
 
 .footer {
