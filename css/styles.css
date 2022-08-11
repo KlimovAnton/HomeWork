@@ -61,11 +61,11 @@ margin-left: 51px;
 }
 
 .header-mail {
-    margin-left: 340px;
+    margin-left: 314px;
 }
 
 .header-tel {
-    margin-left: 45px;
+    margin-left: 30px;
 }
 
 .flex {
@@ -123,6 +123,9 @@ margin-left: 51px;
     line-height: 1.42;
     letter-spacing: 0.02em;
     color:#757575;  
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .header-link:hover,
@@ -134,6 +137,27 @@ margin-left: 51px;
     color:var(--hover-focus-color);
 }
 
+.header-mail:hover .mail-icon,
+.header-tel:hover .tel-icon,
+.header-mail:focus .mail-icon,
+.header-tel:focus .tel-icon {
+    fill:#2196F3;
+} 
+
+.mail-icon:hover,
+.tel-icon:hover,
+.mail-icon:focus,
+.tel-icon:focus {
+    fill:#2196F3;
+}
+
+.mail-icon {
+margin-right: 10px;
+}
+
+.tel-icon {
+    margin-right: 10px;
+}
 .solutions {
     background-color: #C4C4C4;
     background-image: linear-gradient(
@@ -141,7 +165,8 @@ margin-left: 51px;
     rgba(47, 48, 58, 0.4)
      ), 
      url(../images/background-img.jpg);
-    height: 600px;
+    max-height: 600px;
+    max-width: 1600px;
     margin: 0 auto;
     padding:200px 0;
 }
@@ -216,11 +241,17 @@ margin-left: 51px;
     padding: 6px 22px;
 }
 
-
-.btn:hover,
-.btn:focus,
 .btn-portfolio:focus,
 .btn-portfolio:hover {
+    background:var(--hover-focus-color);
+    box-shadow: 
+    0px 3px 1px rgba(0, 0, 0, 0.1), 
+    0px 1px 2px rgba(0, 0, 0, 0.08), 
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+
+.btn:hover,
+.btn:focus {
     background:var(--hover-focus-color);
 }
 
@@ -246,7 +277,6 @@ margin-left: 51px;
     margin-left: 25px;
 }
 
-
 .quality-title {
     font-weight: 700;
     font-size: 14px;
@@ -256,6 +286,17 @@ margin-left: 51px;
     color: var(--title-color);
     max-width: 270px;
     margin-bottom: 10px;
+}
+
+.quality-link {
+    width: 270px;
+    height: 120px;
+    background: #F5F4FA;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
 }
 
 .quaility-p {
@@ -324,6 +365,12 @@ margin-left: 51px;
     width:370px;
 }
 
+.work-box:hover {
+    box-shadow: 
+    0px 1px 1px rgba(0, 0, 0, 0.12), 
+    0px 4px 4px rgba(0, 0, 0, 0.06), 
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+}
 .work-smallbox {
     padding: 20px 24px;
     border: 1px solid #EEEEEE; 
@@ -356,7 +403,10 @@ margin-left: 51px;
 
 .team-box {
     background: #FFFFFF;
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    box-shadow: 
+    0px 1px 3px rgba(0, 0, 0, 0.12), 
+    0px 1px 1px rgba(0, 0, 0, 0.14), 
+    0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
  
 }
@@ -402,12 +452,12 @@ margin-left: 51px;
     border-radius: 50%;
     background-color: #fff;
     display: flex;
-    align-content: center;
     justify-content: center;
+    align-items: center;
 }
 
 .people-soc-link:hover,
- .people-soc-link:focus {
+.people-soc-link:focus {
     background-color: #2196F3;
 }
 
@@ -420,9 +470,54 @@ margin-left: 51px;
     fill:#fff;
 }
 
+.customers {
+    padding: 94px 0;
+}
+
+.customers-list {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.customers-link {
+    width: 170px;
+    height: 92px;
+    border: 1px solid #AFB1B8;
+    border-radius: 4px;
+    background-color: #fff; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.customers-icon {
+    fill: #AFB1B8;
+}
+
+.customers-link:hover,
+.customers-link:focus {
+    border: 1px solid #2196F3;
+    border-radius: 4px;
+}
+
+.customers-link:hover .customers-icon,
+.customers-link:focus .customers-icon{
+    fill: #2196F3;
+}
+
 .footer {
     background:#2F303A;
     padding: 60px 0;
+}
+
+.flex-soc {
+    display: flex;
+    align-items: baseline;
+}
+
+.social {
+    margin-left: 70px;
 }
 
 .footer-address {
@@ -468,9 +563,10 @@ margin-left: 51px;
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: #FFFFFF;
+    margin-bottom: 20px;
 }
 
-/* .footer-soc {
+.footer-soc {
     display: flex;
     justify-content: center;
     gap: 10px;
@@ -480,9 +576,17 @@ margin-left: 51px;
     width: 44px;
     height: 44px;
     border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    fill: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-soc-link:hover,
+.footer-soc-link:focus {
     background-color: #2196F3;
-    display: block;
-} */
+}
 
 .work-portfolio-title {
     font-weight: 700;
