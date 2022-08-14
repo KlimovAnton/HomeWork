@@ -49,6 +49,25 @@ body {
 	align-content: stretch;
 }
 
+.header-link {
+    position: relative;
+}
+
+.header-link::after {
+}
+
+.header-link.current::after {
+    content: '';
+    width: 105%;
+    height: 4px;
+    background-color: #2196F3;
+    border-radius: 2px;
+    display: block;
+    position: absolute;
+    left:0;
+    bottom: -31px;
+}
+
 .header-item:nth-of-type(2),
 .header-item:nth-of-type(3) {
 margin-left: 51px;
@@ -115,6 +134,7 @@ margin-left: 51px;
     line-height: 1.42;
     letter-spacing: 0.02em;
     color:#212121;
+    transition: color 250ms linear;
 }
 
 .header-tel, .header-mail {
@@ -126,6 +146,20 @@ margin-left: 51px;
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: color 250ms linear;
+}
+
+.mail-icon {
+    fill: #757575;
+    margin-right: 10px;
+    transition: color 250ms linear, fill 300ms linear;
+}
+
+.tel-icon {
+    fill: #757575;
+    margin-right: 10px;
+    transition: color 300ms linear, fill 300ms linear;
+    
 }
 
 .header-link:hover,
@@ -151,13 +185,6 @@ margin-left: 51px;
     fill:#2196F3;
 }
 
-.mail-icon {
-margin-right: 10px;
-}
-
-.tel-icon {
-    margin-right: 10px;
-}
 .solutions {
     background-color: #C4C4C4;
     background-image: linear-gradient(
@@ -214,6 +241,7 @@ margin-right: 10px;
     padding: 10px 32px;
     border-radius: 4px;
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
+    transition: color 250ms linear;
 }  
 
 .btn-list {
@@ -239,10 +267,12 @@ margin-right: 10px;
     border:none;
     margin-left: 8px;
     padding: 6px 22px;
+    transition: background-color 250ms linear, color 300ms linear;
 }
 
 .btn-portfolio:focus,
 .btn-portfolio:hover {
+    color:#FFF;
     background:var(--hover-focus-color);
     box-shadow: 
     0px 3px 1px rgba(0, 0, 0, 0.1), 
@@ -326,12 +356,70 @@ margin-right: 10px;
 	align-content: stretch;
 }
 
+.work-item {
+    position: relative;
+}
+
 .work-item:nth-child(2),
 .work-item:nth-child(3) {
     margin-left: 30px;
 }
 
+.work-background {
+    width: 370px;
+    height: 70px;
+    background: rgba(47, 48, 58, 0.8);
+    position: absolute;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    text-align: center;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 4px;
+}
 
+.work-portfolio-position {
+    position: relative;
+    overflow: hidden;
+}
+
+.work-portfolio-background {
+    width: 100%;
+    height: 100%;
+    background-color: #2196F3;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top:0;
+    left: 0 ;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.55;
+    letter-spacing: 0.03em;
+    color: #FFFFFF;
+    padding: 63px 24px 91px 24px;
+    transform: translateY(100%);
+    transition: transform 250ms linear, opacity 250ms linear;
+    opacity: 0;
+    overflow: auto;
+}
+
+.work-box:hover .work-portfolio-background {
+    transform: translateY(0);
+    opacity: 1;
+}
 
 .work-portfolio-list {
     display: flex;
@@ -363,7 +451,18 @@ margin-right: 10px;
 
 .work-box {
     width:370px;
+    transition: box-shadow 250ms linear;
 }
+
+/* .work-box:hover .work-portfolio-background,
+.work-box:focus .work-portfolio-background {
+    background: rgba(33, 150, 243, 0.9);
+}
+
+.work-box:hover .work-back-p,
+.work-box:focus .work-back-p {
+    opacity: 1;
+} */
 
 .work-box:hover {
     box-shadow: 
@@ -374,6 +473,7 @@ margin-right: 10px;
 .work-smallbox {
     padding: 20px 24px;
     border: 1px solid #EEEEEE; 
+    margin-top:-4px;
 }
 
 .work-title,
@@ -454,6 +554,7 @@ margin-right: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: background-color 250ms linear;
 }
 
 .people-soc-link:hover,
@@ -463,6 +564,7 @@ margin-right: 10px;
 
 .peaple-soc-icon{
     fill: #AFB1B8;
+    transition: fill 250ms linear;
 }
 
 .people-soc-link:hover .peaple-soc-icon, 
@@ -489,10 +591,12 @@ margin-right: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: border 250ms linear, border-radius 250ms linear;;
 }
 
 .customers-icon {
     fill: #AFB1B8;
+    transition: fill 250ms linear;
 }
 
 .customers-link:hover,
@@ -536,6 +640,7 @@ margin-right: 10px;
     letter-spacing: 0.03em;
     color: #FFFFFF;
     margin-bottom: 9px;
+    transition: color 250ms linear;
 }
 
 .footer-mail,
@@ -545,6 +650,7 @@ margin-right: 10px;
     letter-spacing: 0.03em;
     color: rgba(255, 255, 255, 0.6);
     margin-bottom: 9px;
+    transition: color 250ms linear;
 }
 
 .footer-link:hover,
@@ -581,6 +687,7 @@ margin-right: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: background-color 250ms linear;
 }
 
 .footer-soc-link:hover,
@@ -602,4 +709,50 @@ margin-right: 10px;
     line-height: 1.87;
     letter-spacing: 0.03em;
     color: #757575;
+}
+
+.backdrop {
+    position: fixed;
+    top: 0;
+    background-color: rgb(66, 62, 62, 0.5);
+    width: 100%;
+    height: 100%;
+    transition: opacity 500ms linear, visibility 500ms;
+}
+
+.modal {
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 528px;
+    min-height: 581px;
+    background-color: #FFF;
+    border-radius: 4px;
+    box-shadow: 
+    0px 1px 3px rgba(0, 0, 0, 0.12), 
+    0px 1px 1px rgba(0, 0, 0, 0.14), 
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+    transform: translate(-50%, -50%) scale(1);
+    transition: transform 500ms linear;
+}
+.backdrop.is-hidden .modal {
+    transform: translate(-50%, -50%) scale(0);
+}
+
+.modal-close {
+    position: absolute;
+    right: 10px;
+    top:10px;
+    width: 30px;
+    height: 30px;
+    border:1px solid #909090;
+    border-radius: 50%;
+    background-color: transparent;
+}
+
+.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
 }

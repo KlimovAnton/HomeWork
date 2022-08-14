@@ -15,6 +15,12 @@
     integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q==" 
     crossorigin="anonymous" 
     referrerpolicy="no-referrer"/>
+    <link 
+    rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link 
+    href="https://unpkg.com/aos@2.3.1/dist/aos.css" 
+    rel="stylesheet">
     <link rel="stylesheet" href="./css/styles.css"> 
     <title>WebStudio</title>
 </head>
@@ -27,7 +33,7 @@
                 <nav class="header-nav">
                     <ul class="header-list list">
                         <li class="header-item">
-                            <a href="./index.html" class="header-link link">Studio</a>
+                            <a href="./index.html" class="header-link current link">Studio</a>
                         </li>
                         <li class="header-item">
                             <a href="./portfolio.html" class="header-link link">Portfolio</a>
@@ -62,7 +68,7 @@
                     <h1 class="title">
                         EFFECTIVE SOLUTIONS FOR <br>YOUR BUSINESS
                     </h1>
-                    <button type="button" class="btn">
+                    <button type="button" class="btn" data-modal-open>
                         Request our service
                     </button>
                 </div>
@@ -119,13 +125,16 @@
                 </h2>
                 <ul class="work-list list">
                     <li class="work-item">
-                         <img src="./images/image-1.jpg" alt="leptop" width="370" heigh="294">
+                        <img src="./images/image-1.jpg" alt="leptop" class="work-img" width="370" heigh="294">
+                        <div class="work-background">Desktop Apps</div>
                     </li>
                     <li class="work-item">
                         <img src="./images/image-2.jpg" alt="mobile" width="370" heigh="294">
+                        <div class="work-background">Mobile Apps</div>
                     </li>
                     <li class="work-item">
                         <img src="./images/image-3.jpg" alt="ipad" width="370" heigh="294">
+                        <div class="work-background">Design solution</div>
                     </li>
                 </ul>
             </div>
@@ -404,8 +413,16 @@
             </div>
         </div>
     </footer>
-
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+            AOS.init();
+        </script>
         
-
+        <div class="backdrop" data-modal>
+            <div class="modal">
+                <button type="button" class="modal-close" data-modal-close>X</button>
+            </div>
+        </div>
+    <script src="./js/modal.js"></script>
 </body>
 </html>
