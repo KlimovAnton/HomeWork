@@ -454,6 +454,10 @@ margin-left: 51px;
     transition: box-shadow 250ms linear;
 }
 
+.work-box img {
+    display: block;
+}
+
 /* .work-box:hover .work-portfolio-background,
 .work-box:focus .work-portfolio-background {
     background: rgba(33, 150, 243, 0.9);
@@ -473,7 +477,6 @@ margin-left: 51px;
 .work-smallbox {
     padding: 20px 24px;
     border: 1px solid #EEEEEE; 
-    margin-top:-4px;
 }
 
 .work-title,
