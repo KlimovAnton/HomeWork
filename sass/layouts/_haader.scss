@@ -3,7 +3,7 @@
     border-bottom: 1px solid #ECECEC;
     padding-top: 24px;
     padding-bottom: 24px;
-    &-flex {
+    &__flex {
         display: flex;
         flex-direction: row;
         flex-wrap: nowrap;
@@ -11,14 +11,14 @@
         align-items: center;
         align-content: center;
     }
-    &__navigation {
-        margin-left: 97px;
-    }
-
     &__connect {
         margin-left: 314px;
     }
+    &__navigation {
+        margin-left: 97px;
+    }
 }
+
 
 .navigation {
     &__list {
