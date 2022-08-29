@@ -1,0 +1,20 @@
+@import './utils/vars';
+@import './base/reset';
+@import './base/common';
+@import './utils/hidden';
+
+@import './components/container';
+@import './components/modals';
+@import './components/logo';
+
+@import './layouts/haader';
+@import './layouts/solutions';
+@import './layouts/quality';
+@import './layouts/work';
+@import './layouts/team';
+@import './layouts/customers';
+@import './layouts/footer';
+@import './layouts/portfolio';
+@import './components/btn';
+@import './layouts/footer-form';
+@import './layouts/modal-form';
