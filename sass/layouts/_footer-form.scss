@@ -1,5 +1,14 @@
 .footer-form {
-    margin-left: 90px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @media screen and (min-width:1200px) {
+        align-items: start;
+    }
+    gap: 20px;
+    @media screen and (min-width:768px) {
+        margin-top: 52px;
+    }
     &-label {
         font-family: 'Roboto';
         font-style: normal;
@@ -9,15 +18,13 @@
         letter-spacing: 0.03em;
         text-transform: uppercase;
         color: #FFFFFF;
-        width: 22px;
-        height: 16px;
-
-        &-div {
-            margin-bottom: 20px;
-        }
+        
     }
     &-input {
-        width: 358px;
+        @media screen and (max-width:480px) {
+            width: 100%;
+        }
+        width: 450px;
         height: 50px;
         border: 1px solid rgba(255, 255, 255, 0.3);
         filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
@@ -29,18 +36,17 @@
         font-weight: 400;
         font-size: 16px;
         line-height: 1.25;
+        @media screen and (min-width:1200px) {
+            width: 358px;
+        }
     }
-    &-flex {
-        display: flex;
-    }
-
     &-icon {
         fill: #fff;
     }
 }
 
 
-.footer-form-field input {
+.footer-form-input {
     padding-left: 16px;
     &::placeholder {
             font-family: 'Roboto';
@@ -51,4 +57,19 @@
             letter-spacing: 0.03em;
             color: rgba(255, 255, 255, 0.6);
         }
+}
+
+.form-flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    @media screen and (min-width:1200px) {
+        display: flex;
+        flex-direction: row;
+        align-items: stretch;
+        gap: 12px;
+    }
+    
 }

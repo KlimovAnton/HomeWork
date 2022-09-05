@@ -3,11 +3,16 @@
 .btn-list {
     display: flex;
     flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-    margin-bottom: 50px;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 40px;
+    width: 100%;
+    @media screen and (min-width:768px) {
+        justify-content: center;
+    }
+    @media screen and (min-width:1200px) {
+        margin-bottom: 50px;
+    }
 }
 
 .btn-portfolio {
@@ -21,8 +26,7 @@
     color: var(--title-color);
     border-radius: 4px;
     border: none;
-    margin-left: 8px;
-    padding: 6px 22px;
+    padding: 6px 30px;
     transition: background-color 250ms linear, color 300ms linear;
         &:focus,
         &:hover {
@@ -50,15 +54,13 @@
     letter-spacing: 0.06em;
     color: #fff;
     display: flex;
-    flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
-    margin-left: 12px;
 }
 
 .btn-modal {
     background: #2196F3;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    box-shadow: 0px 4px 4px  rgba(0, 0, 0, 0.15);
     border: none;
     border-radius: 4px;
     width: 200px;
@@ -70,5 +72,9 @@
     line-height: 1.87;
     letter-spacing: 0.06em;
     color: #fff;
-    margin: 0 124px;
+    @media screen and (max-width:340px) {
+            width: calc(100% - 30px);
+        }
+    margin: 10px auto 0 auto;
+   
 }

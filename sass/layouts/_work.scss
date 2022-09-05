@@ -1,5 +1,8 @@
 .work {
-    padding-bottom: 94px;
+    display: none;
+    @media screen and (min-width:1200px) {
+        display: block;
+    }
     &__title {
         font-weight: 700;
         font-size: 36px;
@@ -11,19 +14,13 @@
     }
     &__list {
         display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        justify-content: flex-start;
-        align-items: stretch;
-        align-content: stretch;
+        flex-wrap: wrap;
+        gap: 30px;
     }
     &__item {
         position: relative;
     }
-    &__item:nth-child(2),
-    &__item:nth-child(3) {
-        margin-left: 30px;
-    }
+   
     &__background {
         width: 370px;
         height: 70px;

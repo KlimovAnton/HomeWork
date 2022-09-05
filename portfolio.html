@@ -25,7 +25,7 @@
     <header class="header">
         <div class="container">
             <div class="header__flex">
-                <a href="./index.html" class="logo link">
+                <a href="./index.html" class="header__logo logo link">
                     <p>Web<span class="logo-black">Studio</span></p>
                 </a>
                 <nav class="navigation header__navigation">
@@ -55,7 +55,57 @@
                         +38 096 111 11 11
                     </a>
                 </div>
+                <button type="button" class="menu-open-btn" data-menu-open>
+                    <svg class="menu-icon" width="40" height="40">
+                        <use href="./images/icons-2.svg#icon-menu_40px"></use>
+                    </svg>
+                </button>
             </div>
+            <div class="mob__menu is-hidden" data-menu>
+                <div class="container">
+                    <button type="button" class="menu-close-btn" data-menu-close>
+                        <svg class="menu-icon" width="40" height="40">
+                            <use href="./images/icons-2.svg#icon-close_40px"></use>
+                        </svg>
+                    </button>
+                    <nav class="navigation mob_menu-navigation">
+                        <ul class="mob__menu-list list">
+                            <li class="mob__menu-item">
+                                <a href="./index.html" class="mob__menu-link link">Studio</a>
+                            </li>
+                            <li class="mob__menu-item">
+                                <a href="./portfolio.html" class="mob__menu-link link">Portfolio</a>
+                            </li>
+                            <li class="mob__menu-item">
+                                <a href="#" class="mob__menu-link link">Contacts</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="connect mob__connect">
+                        <a href="tel:+38 096 111 11 11" class="mob__connect-tel link">
+                            +38 096 111 11 11
+                        </a>
+                        <a href="mailto:info@devstudio.com" class="mob__connect-mail link">
+                            info@devstudio.com
+                        </a>
+                    </div>
+                    <ul class="mob__soc-list list">
+                        <li class="mob__soc-item">
+                            <a href="#" class="mob__soc-link link">Instagram</a>
+                        </li>
+                        <li class="mob__soc-item">
+                            <a href="#" class="mob__soc-link link">Twitter</a>
+                        </li>
+                        <li class="mob__soc-item">
+                            <a href="#" class="mob__soc-link link">Facebook</a>
+                        </li>
+                        <li class="mob__soc-item">
+                            <a href="#" class="mob__soc-link link">Linkedin</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+    
         </div>
     </header>
 
@@ -67,7 +117,7 @@
                 <ul class="btn-list list">
                     <li class="btn-item"><button type="button" class="btn-portfolio">All</button></li>
                     <li class="btn-item"><button type="button" class="btn-portfolio">Web-sites</button></li>
-                    <li class="btn-item"><button type="button" class="btn-portfolio">Apss</button></li>
+                    <li class="btn-item"><button type="button" class="btn-portfolio">Apps</button></li>
                     <li class="btn-item"><button type="button" class="btn-portfolio">Design</button></li>
                     <li class="btn-item"><button type="button" class="btn-portfolio">Marketing</button></li>
                 </ul>
@@ -78,7 +128,21 @@
                     <li class="work-portfolio-item">
                         <div class="work-portfolio-box">
                             <div class="work-portfolio-position">
-                                <img src="./images/img-1.jpg" alt="proect1" width="370" height="294">
+                                <picture>
+                                    <source srcset="
+                                        ./images/img1.jpg 1x, 
+                                        ./images/img1.jpg 2x
+                                        " media="(min-width:1200px)">
+                                    <source srcset="
+                                        ./images/img1tabl.jpg 1x, 
+                                        ./images/img1tabl-2x.jpg 2x
+                                        " media="(min-width:768px)">
+                                    <source srcset="
+                                        ./images/img1mob.jpg 1x, 
+                                        ./images/img1mob-2x.jpg 2x
+                                        " media="(min-width:480px)">
+                                    <img src="./images/img1.jpg" alt="proect1" width="450" height="294">
+                                </picture>
                                 <div class="work-portfolio-background">
                                     <p class="work-back-p">Technoduck is a state-of-the-art coronavirus distribution
                                         platform.
@@ -86,7 +150,7 @@
                                         and attacks on competitors' secure servers.</p>
                                 </div>
                             </div>
-                            <div class="work-portfolio-smallbox">
+                            <div class="work-portfolio-smallbox work-portfolio-smallbox-padding">
                                 <h3 class="work-portfolio-title">Technoduck</h3>
                                 <p class="work-portfolio-text">Web-site</p>
                             </div>
@@ -94,7 +158,21 @@
                     </li>
                     <li class="work-portfolio-item">
                         <div class="work-portfolio-box">
-                            <img src="./images/img-2.jpg" alt="proect2" width="370" height="294">
+                            <picture>
+                                <source srcset="
+                                    ./images/img2.jpg 1x, 
+                                    ./images/img2.jpg 2x
+                                    " media="(min-width:1200px)">
+                                <source srcset="
+                                    ./images/img2tabl.jpg 1x, 
+                                    ./images/img2tabl-2x.jpg 2x
+                                    " media="(min-width:768px)">
+                                <source srcset="
+                                    ./images/img2mob.jpg 1x, 
+                                    ./images/img2mob-2x.jpg 2x
+                                    " media="(min-width:480px)">
+                                <img src="./images/img2.jpg" alt="proect2" width="450" height="294">
+                            </picture>
                             <div class="work-portfolio-smallbox">
                                 <h3 class="work-portfolio-title">Poster New Orlean vs Golden Star</h3>
                                 <p class="work-portfolio-text">Design</p>
@@ -103,7 +181,21 @@
                     </li>
                     <li class="work-portfolio-item">
                         <div class="work-portfolio-box">
-                            <img src="./images/img-3.jpg" alt="proect3" width="370" height="294">
+                            <picture>
+                                <source srcset="
+                                    ./images/img3.jpg 1x, 
+                                    ./images/img3.jpg 2x
+                                    " media="(min-width:1200px)">
+                                <source srcset="
+                                    ./images/img3tabl.jpg 1x, 
+                                    ./images/img3tabl-2x.jpg 2x
+                                    " media="(min-width:768px)">
+                                <source srcset="
+                                    ./images/img3mob.jpg 1x, 
+                                    ./images/img3mob-2x.jpg 2x
+                                    " media="(min-width:480px)">
+                                <img src="./images/img3.jpg" alt="proect3" width="450" height="294">
+                            </picture>
                             <div class="work-portfolio-smallbox">
                                 <h3 class="work-portfolio-title">Seafood Restaurant</h3>
                                 <p class="work-portfolio-text">Apps</p>
@@ -112,7 +204,21 @@
                     </li>
                     <li class="work-portfolio-item">
                         <div class="work-portfolio-box">
-                            <img src="./images/img-4.jpg" alt="proect4" width="370" height="294">
+                            <picture>
+                                <source srcset="
+                                    ./images/img4.jpg 1x, 
+                                    ./images/img4.jpg 2x
+                                    " media="(min-width:1200px)">
+                                <source srcset="
+                                    ./images/img4tabl.jpg 1x, 
+                                    ./images/img4tabl-2x.jpg 2x
+                                    " media="(min-width:768px)">
+                                <source srcset="
+                                    ./images/img4mob.jpg 1x, 
+                                    ./images/img4mob-2x.jpg 2x
+                                    " media="(min-width:480px)">
+                                <img src="./images/img4.jpg" alt="proect4" width="450" height="294">
+                            </picture>
                             <div class="work-portfolio-smallbox">
                                 <h3 class="work-portfolio-title">Project Prime</h3>
                                 <p class="work-portfolio-text">Marketing</p>
@@ -122,7 +228,21 @@
 
                     <li class="work-portfolio-item">
                         <div class="work-portfolio-box">
-                            <img src="./images/img-5.jpg" alt="proect5" width="370" height="294">
+                            <picture>
+                                <source srcset="
+                                    ./images/img5.jpg 1x, 
+                                    ./images/img5.jpg 2x
+                                    " media="(min-width:1200px)">
+                                <source srcset="
+                                    ./images/img5tabl.jpg 1x, 
+                                    ./images/img5tabl-2x.jpg 2x
+                                    " media="(min-width:768px)">
+                                <source srcset="
+                                    ./images/img5mob.jpg 1x, 
+                                    ./images/img5mob-2x.jpg 2x
+                                    " media="(min-width:480px)">
+                                <img src="./images/img5.jpg" alt="proect5" width="450" height="294">
+                            </picture>
                             <div class="work-portfolio-smallbox">
                                 <h3 class="work-portfolio-title">Project Boxes</h3>
                                 <p class="work-portfolio-text">Apps</p>
@@ -132,7 +252,21 @@
 
                     <li class="work-portfolio-item">
                         <div class="work-portfolio-box">
-                            <img src="./images/img-6.jpg" alt="proect6" width="370" height="294">
+                            <picture>
+                                <source srcset="
+                                    ./images/img6.jpg 1x, 
+                                    ./images/img6.jpg 2x
+                                    " media="(min-width:1200px)">
+                                <source srcset="
+                                    ./images/img6tabl.jpg 1x, 
+                                    ./images/img6tabl-2x.jpg 2x
+                                    " media="(min-width:768px)">
+                                <source srcset="
+                                    ./images/img6mob.jpg 1x, 
+                                    ./images/img6mob-2x.jpg 2x
+                                    " media="(min-width:480px)">
+                                <img src="./images/img6.jpg" alt="proect6" width="450" height="294">
+                            </picture>
                             <div class="work-portfolio-smallbox">
                                 <h3 class="work-portfolio-title">Inspitarion has no Borders</h3>
                                 <p class="work-portfolio-text">Web-site</p>
@@ -142,7 +276,21 @@
 
                     <li class="work-portfolio-item">
                         <div class="work-portfolio-box">
-                            <img src="./images/img-7.jpg" alt="proect7" width="370" height="294">
+                            <picture>
+                                <source srcset="
+                                    ./images/img7.jpg 1x, 
+                                    ./images/img7.jpg 2x
+                                    " media="(min-width:1200px)">
+                                <source srcset="
+                                    ./images/img7tabl.jpg 1x, 
+                                    ./images/img7tabl-2x.jpg 2x
+                                    " media="(min-width:768px)">
+                                <source srcset="
+                                    ./images/img7mob.jpg 1x, 
+                                    ./images/img7mob-2x.jpg 2x
+                                    " media="(min-width:480px)">
+                                <img src="./images/img7.jpg" alt="proect7" width="450" height="294">
+                            </picture>
                             <div class="work-portfolio-smallbox">
                                 <h3 class="work-portfolio-title">Linited Edition</h3>
                                 <p class="work-portfolio-text">Design</p>
@@ -152,7 +300,21 @@
 
                     <li class="work-portfolio-item">
                         <div class="work-portfolio-box">
-                            <img src="./images/img-8.jpg" alt="proect8" width="370" height="294">
+                            <picture>
+                                <source srcset="
+                                    ./images/img8.jpg 1x, 
+                                    ./images/img8.jpg 2x
+                                    " media="(min-width:1200px)">
+                                <source srcset="
+                                    ./images/img8tabl.jpg 1x, 
+                                    ./images/img8tabl-2x.jpg 2x
+                                    " media="(min-width:768px)">
+                                <source srcset="
+                                    ./images/img8mob.jpg 1x, 
+                                    ./images/img8mob-2x.jpg 2x
+                                    " media="(min-width:480px)">
+                                <img src="./images/img8.jpg" alt="proect8" width="450" height="294">
+                            </picture>
                             <div class="work-portfolio-smallbox">
                                 <h3 class="work-portfolio-title">Project LAB</h3>
                                 <p class="work-portfolio-text">Marketing</p>
@@ -162,7 +324,21 @@
 
                     <li class="work-portfolio-item">
                         <div class="work-portfolio-box">
-                            <img src="./images/img-9.jpg" alt="proect9" width="370" height="294">
+                            <picture>
+                                <source srcset="
+                                    ./images/img9.jpg 1x, 
+                                    ./images/img9.jpg 2x
+                                    " media="(min-width:1200px)">
+                                <source srcset="
+                                    ./images/img9tabl.jpg 1x, 
+                                    ./images/img9tabl-2x.jpg 2x
+                                    " media="(min-width:768px)">
+                                <source srcset="
+                                    ./images/img9mob.jpg 1x, 
+                                    ./images/img9mob-2x.jpg 2x
+                                    " media="(min-width:480px)">
+                                <img src="./images/img9.jpg" alt="proect9" width="450" height="294">
+                            </picture>
                             <div class="work-portfolio-smallbox">
                                 <h3 class="work-portfolio-title">Growing Business</h3>
                                 <p class="work-portfolio-text">Apps</p>
@@ -223,20 +399,17 @@
                     </li>
                 </ul>
             </div>
+
             <form class="footer-form" autocomplete="off">
-                <div class="footer-form-field">
-                    <div class="footer-form-label-div">
-                        <label for="mail" class="footer-form-label">Subscribe to the newsletter</label>
-                    </div>
-                    <div class="footer-form-flex">
-                        <input type="email" name="mail" id="mail" class="footer-form-input" placeholder="E-mail">
-                        <button type="submit" class="btn-form">
-                            <p>Subcribe</p>
-                            <svg class="footer-form-icon" width="24" height="24">
-                                <use href="./images/icons-5.svg#icon-telegram"></use>
-                            </svg>
-                        </button>
-                    </div>
+                <label for="mail" class="footer-form-label">Subscribe to the newsletter</label>
+                <div class="form-flex">
+                    <input type="email" name="mail" id="mail" class="footer-form-input" placeholder="E-mail">
+                    <button type="submit" class="btn-form">
+                        <p>Subcribe</p>
+                        <svg class="footer-form-icon" width="24" height="24">
+                            <use href="./images/icons-5.svg#icon-telegram"></use>
+                        </svg>
+                    </button>
                 </div>
             </form>
         </div>
@@ -246,6 +419,7 @@
     <script>
         AOS.init();
     </script>
+    <script src="./js/mobile-menu.js"></script>
 
 </body>
 

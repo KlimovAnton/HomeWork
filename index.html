@@ -3,19 +3,19 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400&family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
-        rel="stylesheet">
+        rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
         integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="./css/main.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./css/main.min.css" />
     <title>WebStudio</title>
 </head>
 
@@ -54,7 +54,57 @@
                         +38 096 111 11 11
                     </a>
                 </div>
+                <button type="button" class="menu-open-btn" data-menu-open>
+                    <svg class="menu-icon" width="40" height="40">
+                        <use href="./images/icons-2.svg#icon-menu_40px"></use>
+                    </svg>
+                </button>
             </div>
+                <div class="mob__menu is-hidden" data-menu>
+                    <div class="container">
+                        <button type="button" class="menu-close-btn" data-menu-close>
+                            <svg class="menu-icon" width="40" height="40">
+                                <use href="./images/icons-2.svg#icon-close_40px"></use>
+                            </svg>
+                        </button>
+                        <nav class="navigation mob_menu-navigation">
+                            <ul class="mob__menu-list list">
+                                <li class="mob__menu-item">
+                                    <a href="./index.html" class="mob__menu-link link">Studio</a>
+                                </li>
+                                <li class="mob__menu-item">
+                                    <a href="./portfolio.html" class="mob__menu-link link">Portfolio</a>
+                                </li>
+                                <li class="mob__menu-item">
+                                    <a href="#" class="mob__menu-link link">Contacts</a>
+                                </li>
+                            </ul>
+                        </nav>
+                        <div class="connect mob__connect">
+                            <a href="tel:+38 096 111 11 11" class="mob__connect-tel link">
+                                +38 096 111 11 11
+                            </a>
+                            <a href="mailto:info@devstudio.com" class="mob__connect-mail link">
+                                info@devstudio.com
+                            </a>
+                        </div>
+                        <ul class="mob__soc-list list">
+                            <li class="mob__soc-item">
+                                <a href="#" class="mob__soc-link link">Instagram</a>
+                            </li>
+                            <li class="mob__soc-item">
+                                <a href="#" class="mob__soc-link link">Twitter</a>
+                            </li>
+                            <li class="mob__soc-item">
+                                <a href="#" class="mob__soc-link link">Facebook</a>
+                            </li>
+                            <li class="mob__soc-item">
+                                <a href="#" class="mob__soc-link link">Linkedin</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            
         </div>
     </header>
 
@@ -65,6 +115,9 @@
             <div class="container">
                 <div class="solution__container">
                     <h1 class="solution__title">
+                        EFFECTIVE SOLUTIONS <br>FOR YOUR BUSINESS
+                    </h1>
+                    <h1 class="solution__title-2">
                         EFFECTIVE SOLUTIONS FOR <br>YOUR BUSINESS
                     </h1>
                     <button type="button" class="solution__btn" data-modal-open>
@@ -79,7 +132,7 @@
                 <ul class="quality__list list">
                     <li class="quality__item">
                         <a href="" class="quality__link link">
-                            <svg class="quality__icon" width="70" height="70">
+                            <svg class="quality__icon" width="270" height="120">
                                 <use href="./images/icons-3.svg#icon-antenna-1-1"></use>
                             </svg>
                         </a>
@@ -89,7 +142,7 @@
                     </li>
                     <li class="quality__item">
                         <a href="" class="quality__link link">
-                            <svg class="quality__icon" width="70" height="70">
+                            <svg class="quality__icon" width="270" height="120">
                                 <use href="./images/icons-3.svg#icon-clock-1-1"></use>
                             </svg>
                         </a>
@@ -99,7 +152,7 @@
                     </li>
                     <li class="quality__item">
                         <a href="" class="quality__link link">
-                            <svg class="quality__icon" width="70" height="70">
+                            <svg class="quality__icon" width="270" height="120">
                                 <use href="./images/icons-3.svg#icon-diagram-1-1"></use>
                             </svg>
                         </a>
@@ -109,7 +162,7 @@
                     </li>
                     <li class="quality__item">
                         <a href="" class="quality__link link">
-                            <svg class="quality__icon" width="70" height="70">
+                            <svg class="quality__icon" width="270" height="120">
                                 <use href="./images/icons-3.svg#icon-astronaut-1-1"></use>
                             </svg>
                         </a>
@@ -128,15 +181,41 @@
                 </h2>
                 <ul class="work__list list">
                     <li class="work__item">
-                        <img src="./images/image-1.jpg" alt="leptop" class="work__img" width="370" heigh="294">
+                        <img 
+                        src="./images/image-1.jpg" 
+                        srcset="
+                        ./images/image-1.jpg 1x,
+                        ./images/image-1-2x.jpg 2x
+                        "
+                        alt="leptop" 
+                        class="work__img" 
+                        width="370" 
+                        heigh="294">
                         <div class="work__background">Desktop Apps</div>
                     </li>
                     <li class="work__item">
-                        <img src="./images/image-2.jpg" alt="mobile" width="370" heigh="294">
+                        <img
+                        srcset="
+                        ./images/image-2.jpg 1x,
+                        ./images/image-2-2x.jpg 2x
+                        "
+                         src="./images/image-2.jpg"
+                         alt="mobile"
+                         width="370"
+                         heigh="294">
+
                         <div class="work__background">Mobile Apps</div>
                     </li>
                     <li class="work__item">
-                        <img src="./images/image-3.jpg" alt="ipad" width="370" heigh="294">
+                        <img
+                        srcset="
+                        ./images/image-3.jpg 1x,
+                        ./images/image-3-2x.jpg 2x
+                        "
+                        src="./images/image-3.jpg" 
+                        alt="ipad" 
+                        width="370" 
+                        heigh="294">
                         <div class="work__background">Design solution</div>
                     </li>
                 </ul>
@@ -151,7 +230,21 @@
                 <ul class="team__list list">
                     <li class="team__item">
                         <div class="team__box">
-                            <img src="./images/image-4.jpg" alt="person1" width="270" height="260">
+                            <picture>
+                                <source srcset="
+                                    ./images/team1.jpg 1x, 
+                                    ./images/team1-2x.jpg 2x
+                                    " media="(min-width:1200px)">
+                                <source srcset="
+                                    ./images/team1tabl.jpg 1x, 
+                                    ./images/team1tabl.jpg 2x
+                                    " media="(min-width:768px)">
+                                <source srcset="
+                                    ./images/team1-mob.jpg 1x, 
+                                    ./images/team1-mob-2x.jpg 2x
+                                    " media="(min-width:480px)">
+                                <img src="./images/team1.jpg" alt="person1" width="450" height="460">
+                            </picture>
                             <div class="team__smallbox smallbox">
                                 <h3 class="smallbox__title">Игорь Демьяненко</h3>
                                 <p class="smallbox__text">Product Designer</p>
@@ -190,7 +283,21 @@
                     </li>
                     <li class="team__item">
                         <div class="team__box">
-                            <img src="./images/image-5.jpg" alt="person2" width="270" height="260">
+                            <picture>
+                                <source srcset="
+                                    ./images/team2.jpg 1x, 
+                                    ./images/team2-2x.jpg 2x
+                                    " media="(min-width:1200px)">
+                                <source srcset="
+                                    ./images/team2tabl.jpg 1x, 
+                                    ./images/team2tabl.jpg 2x
+                                    " media="(min-width:768px)">
+                                <source srcset="
+                                    ./images/team2-mob.jpg 1x, 
+                                    ./images/team2-mob-2x.jpg 2x
+                                    " media="(min-width:480px)">
+                                <img src="./images/team2.jpg" alt="person2" width="450" height="460">
+                            </picture>
                             <div class="team__smallbox smallbox">
                                 <h3 class="smallbox__title">Ольга Репина</h3>
                                 <p class="smallbox__text">Frontend Developer</p>
@@ -229,7 +336,21 @@
                     </li>
                     <li class="team__item">
                         <div class="team__box">
-                            <img src="./images/image-6.jpg" alt="person3" width="270" height="260">
+                            <picture>
+                                <source srcset="
+                                    ./images/team3.jpg 1x, 
+                                    ./images/team3-2x.jpg 2x
+                                    " media="(min-width:1200px)">
+                                <source srcset="
+                                    ./images/team3tabl.jpg 1x, 
+                                    ./images/team3tabl.jpg 2x
+                                    " media="(min-width:768px)">
+                                <source srcset="
+                                    ./images/team3-mob.jpg 1x, 
+                                    ./images/team3-mob-2x.jpg 2x
+                                    " media="(min-width:480px)">
+                                <img src="./images/team3.jpg" alt="person3" width="450" height="460">
+                            </picture>
                             <div class="team__smallbox smallbox">
                                 <h3 class="smallbox__title">Николай Тарасов</h3>
                                 <p class="smallbox__text">Marketing</p>
@@ -268,7 +389,21 @@
                     </li>
                     <li class="team__item">
                         <div class="team__box">
-                            <img src="./images/image-7.jpg" alt="person4" width="270" height="260">
+                            <picture>
+                                <source srcset="
+                                    ./images/team4.jpg 1x, 
+                                    ./images/team4-2x.jpg 2x
+                                    " media="(min-width:1200px)">
+                                <source srcset="
+                                    ./images/team4tabl.jpg 1x, 
+                                    ./images/team4tabl.jpg 2x
+                                    " media="(min-width:768px)">
+                                <source srcset="
+                                    ./images/team4-mob.jpg 1x, 
+                                    ./images/team4-mob-2x.jpg 2x
+                                    " media="(min-width:480px)">
+                                <img src="./images/team4.jpg" alt="person4" width="450" height="460">
+                            </picture>
                             <div class="team__smallbox smallbox">
                                 <h3 class="smallbox__title">Михаил Ермаков</h3>
                                 <p class="smallbox__text">UI Designer</p>
@@ -360,8 +495,8 @@
                     </li>
                 </ul>
             </div>
-        </section>
-    </main>
+        </section> 
+    </main> 
 
 
     <!--footer-->
@@ -413,22 +548,19 @@
                         </li>
                     </ul>
                 </div>
+
                 <form class="footer-form" autocomplete="off">
-                    <div class="footer-form-field">
-                        <div class="footer-form-label-div">
-                            <label for="mail" class="footer-form-label">Subscribe to the newsletter</label>
-                        </div>
-                        <div class="footer-form-flex">
-                            <input type="email" name="mail" id="mail" class="footer-form-input" placeholder="E-mail">
-                            <button type="submit" class="btn-form">
-                                <p>Subcribe</p>
-                                <svg class="footer-form-icon" width="24" height="24">
-                                    <use href="./images/icons-5.svg#icon-telegram"></use>
-                                </svg>
-                            </button>
-                        </div>
+                    <label for="mail" class="footer-form-label">Subscribe to the newsletter</label>
+                    <div class="form-flex">
+                        <input type="email" name="mail" id="mail" class="footer-form-input" placeholder="E-mail">
+                        <button type="submit" class="btn-form">
+                            <p>Subcribe</p>
+                            <svg class="footer-form-icon" width="24" height="24">
+                                <use href="./images/icons-5.svg#icon-telegram"></use>
+                            </svg>
+                        </button>
                     </div>
-                </form>
+                </form> 
             </div>
         </div>
     </footer>
@@ -495,13 +627,12 @@
                     </label>
                 </div>
 
-                <div class="modal-box">
                     <button class="btn-modal" type="submit">Send</button>
-                </div>
             </form>
         </div>
     </div>
     <script src="./js/modal.js"></script>
+    <script src="./js/mobile-menu.js"></script>
 </body>
 
 </html>
