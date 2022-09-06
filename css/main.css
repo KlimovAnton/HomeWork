@@ -143,6 +143,12 @@ body {
   overflow: hidden;
 }
 
+.modal-closee {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+
 .logo {
   font-family: "Raleway";
   font-weight: 700;
@@ -151,6 +157,11 @@ body {
   letter-spacing: 0.03em;
   color: #2196F3;
   text-align: center;
+}
+@media screen and (min-width: 1200px) {
+  .logo {
+    text-align: start;
+  }
 }
 .logo-black {
   color: #000;
@@ -180,18 +191,16 @@ body {
 .header__flex {
   display: flex;
   align-items: center;
-  height: 16px;
+  height: 28px;
 }
 @media screen and (min-width: 768px) {
   .header__flex {
     justify-content: space-between;
-    height: 26px;
   }
 }
 @media screen and (min-width: 1200px) {
   .header__flex {
     justify-content: start;
-    height: 28px;
   }
 }
 .header__connect {
@@ -575,6 +584,7 @@ body {
 @media screen and (min-width: 1200px) {
   .work {
     display: block;
+    padding-bottom: 94px;
   }
 }
 .work__title {
@@ -618,6 +628,11 @@ body {
 .team {
   background-color: #F5F4FA;
   padding: 60px 0;
+}
+@media screen and (min-width: 1200px) {
+  .team {
+    padding: 94px 0;
+  }
 }
 .team__title {
   font-weight: 700;
@@ -851,10 +866,6 @@ body {
 }
 .footer-tel:hover, .footer-tel:focus {
   color: var(--hover-focus-color);
-}
-.footer-social {
-  margin-top: 60px;
-  margin-bottom: 60px;
 }
 .footer-title {
   font-weight: 700;
@@ -1091,11 +1102,6 @@ body {
 @media screen and (min-width: 1200px) {
   .footer-form {
     align-items: start;
-  }
-}
-@media screen and (min-width: 768px) {
-  .footer-form {
-    margin-top: 52px;
   }
 }
 .footer-form-label {

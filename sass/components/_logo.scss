@@ -6,9 +6,9 @@
     letter-spacing: 0.03em;
     color: #2196F3;
     text-align: center;
-    // @media screen and (min-width:1200px) {
-    //         text-align: start;
-    //     }
+    @media screen and (min-width:1200px) {
+            text-align: start;
+        }
     &-black {
         color: #000;
     }
