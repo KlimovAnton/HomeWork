@@ -265,8 +265,8 @@ body {
 }
 .connect__mail {
   font-weight: 500;
-  font-size: 14px;
-  line-height: 1.42;
+  font-size: 12px;
+  line-height: 1.16;
   letter-spacing: 0.02em;
   color: #757575;
   display: flex;
@@ -277,10 +277,16 @@ body {
 .connect__mail:focus, .connect__mail:hover {
   color: var(--hover-focus-color);
 }
+@media screen and (min-width: 1200px) {
+  .connect__mail {
+    font-size: 14px;
+    line-height: 1.42;
+  }
+}
 .connect__tel {
   font-weight: 500;
-  font-size: 14px;
-  line-height: 1.42;
+  font-size: 12px;
+  line-height: 1.16;
   letter-spacing: 0.02em;
   color: #757575;
   display: flex;
@@ -290,6 +296,12 @@ body {
 }
 .connect__tel:focus, .connect__tel:hover {
   color: var(--hover-focus-color);
+}
+@media screen and (min-width: 1200px) {
+  .connect__tel {
+    font-size: 14px;
+    line-height: 1.42;
+  }
 }
 .connect__icon {
   fill: #757575;
@@ -726,7 +738,7 @@ body {
   fill: #AFB1B8;
   transition: fill 250ms linear;
 }
-.people-soc-link:hover .soc__icon, .people-soc-link:focus .soc__icon {
+.soc__link:hover .soc__icon, .soc__link:focus .soc__icon {
   fill: #fff;
 }
 
@@ -804,6 +816,11 @@ body {
   background: #2F303A;
   padding: 60px 0;
 }
+.footer-flex {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
 @media screen and (min-width: 768px) {
   .footer-flex {
     display: flex;
@@ -811,12 +828,14 @@ body {
     flex-wrap: wrap;
     align-items: baseline;
     justify-content: space-around;
+    gap: 0;
   }
 }
 @media screen and (min-width: 1200px) {
   .footer-flex {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
   }
 }
 .footer-address {
@@ -1018,7 +1037,7 @@ body {
   flex-direction: row;
   flex-wrap: wrap;
   gap: 8px;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
   width: 100%;
 }
 @media screen and (min-width: 768px) {
@@ -1102,6 +1121,11 @@ body {
 @media screen and (min-width: 1200px) {
   .footer-form {
     align-items: start;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+  .footer-form {
+    margin-top: 60px;
   }
 }
 .footer-form-label {

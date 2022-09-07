@@ -101,8 +101,8 @@
     &__icon {
         fill: #AFB1B8;
         transition: fill 250ms linear;
-        .people-soc-link:hover &,
-        .people-soc-link:focus & {
+        .soc__link:hover &,
+        .soc__link:focus & {
             fill: #fff;
         }
     }
